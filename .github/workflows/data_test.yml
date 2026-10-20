@@ -1,0 +1,40 @@
+name: data-test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: NSE option chain
+        run: |
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
+          curl -s -c c.txt -A "$UA" -o /dev/null -w "home HTTP %{http_code}\n" https://www.nseindia.com
+          for S in NIFTY BANKNIFTY; do
+            curl -s -b c.txt -A "$UA" -H "Accept: application/json" -H "Referer: https://www.nseindia.com/option-chain" -o oc_$S.json -w "$S chain HTTP %{http_code}\n" "https://www.nseindia.com/api/option-chain-indices?symbol=$S"
+            head -c 200 oc_$S.json; echo
+          done
+      - name: Sensex (BSE) try
+        run: |
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36"
+          curl -s -A "$UA" -H "Referer: https://www.bseindia.com/" -o bse.txt -w "BSE HTTP %{http_code}\n" "https://api.bseindia.com/BseIndiaAPI/api/ddlExpiry_IV/w?ProductType=IO&scrip_cd=1"
+          head -c 300 bse.txt
+      - name: Yahoo prices and options
+        run: |
+          pip install yfinance
+          python - <<'EOF'
+          import yfinance as yf
+          for s in ["^NSEI", "^NSEBANK", "^BSESN"]:
+              try:
+                  d = yf.Ticker(s).history(period="5d", interval="5m")
+                  print(s, "5m rows:", len(d), "last:", d.index[-1] if len(d) else None)
+              except Exception as x:
+                  print(s, "ERROR", x)
+          for s in ["QQQ", "SPY"]:
+              try:
+                  e = yf.Ticker(s).options
+                  print(s, "expiries:", len(e), e[:2], e[-1:])
+              except Exception as x:
+                  print(s, "ERROR", x)
+          EOF
