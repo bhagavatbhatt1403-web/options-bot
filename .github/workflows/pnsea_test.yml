@@ -10,15 +10,31 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install pnsea
+      - run: pip install pnsea yfinance
       - run: |
           python - <<'EOF'
+          import pandas as pd
+          pd.set_option("display.width", 250)
+          pd.set_option("display.max_columns", 60)
           from pnsea import NSE
-          try:
-              nse = NSE()
-              df = nse.options.option_chain("NIFTY")
-              print(type(df))
-              print(df)
-          except Exception as e:
-              print("ERROR:", repr(e))
+          nse = NSE()
+          for sym in ["NIFTY", "BANKNIFTY"]:
+              try:
+                  res = nse.options.option_chain(sym)
+                  print("=====", sym, type(res), len(res))
+                  for i, part in enumerate(res):
+                      print("--- PART", i, type(part))
+                      try:
+                          print(list(part.columns))
+                          print(part.head(3).to_string())
+                      except Exception:
+                          print(part)
+                  df = res[0]
+                  print("expiries:", sorted(df["expiryDates"].unique()))
+              except Exception as e:
+                  print(sym, "ERROR", repr(e))
+          import yfinance as yf
+          for s in ["^NSEI", "^NSEBANK"]:
+              d = yf.Ticker(s).history(period="5d", interval="5m")
+              print(s, "5m rows:", len(d), "last:", d.index[-1] if len(d) else None)
           EOF
