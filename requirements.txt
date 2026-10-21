@@ -1,0 +1,4 @@
+pnsea
+yfinance
+pandas
+requests
