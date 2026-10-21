@@ -1,0 +1,36 @@
+{
+  "open": [],
+  "closed": [],
+  "days": {
+    "NIFTY|2026-10-21": {
+      "snap": {
+        "spot": 23024.4,
+        "atm": 23000.0,
+        "call_oi": 487679.0,
+        "put_oi": 282694.0,
+        "time": "2026-10-21T10:00:37.483987+05:30",
+        "bias": "BULLISH",
+        "rej": 22900.0,
+        "brk": 23050.0,
+        "t1": 23100.0,
+        "t2": 23200.0
+      },
+      "skipped": false,
+      "traded": false,
+      "last_scan": null
+    },
+    "BANKNIFTY|2026-10-21": {
+      "snap": {
+        "spot": 55544.7,
+        "atm": 55500.0,
+        "call_oi": 94110.0,
+        "put_oi": 73883.0,
+        "time": "2026-10-21T10:00:43.363799+05:30",
+        "bias": "NEUTRAL"
+      },
+      "skipped": false,
+      "traded": false,
+      "last_scan": null
+    }
+  }
+}
