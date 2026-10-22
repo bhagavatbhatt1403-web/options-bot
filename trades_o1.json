@@ -1,6 +1,18 @@
 {
   "open": [],
-  "closed": [],
+  "closed": [
+    {
+      "index": "BANKNIFTY",
+      "side": "BUY",
+      "entry": 54786.25,
+      "sl": 54640.19921875,
+      "t1": 55000.0,
+      "t2": 55100.0,
+      "why": "Breakout above resistance",
+      "time": "2026-10-22T10:15:00+05:30",
+      "r": 1.81
+    }
+  ],
   "days": {
     "NIFTY|2026-10-21": {
       "snap": {
@@ -59,8 +71,8 @@
         "t2": 55100.0
       },
       "skipped": false,
-      "traded": false,
-      "last_scan": null
+      "traded": true,
+      "last_scan": "2026-10-22T10:15:00+05:30"
     }
   }
 }
