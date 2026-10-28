@@ -1,5 +1,16 @@
 {
-  "open": [],
+  "open": [
+    {
+      "index": "NIFTY",
+      "side": "BUY",
+      "entry": 22604.849609375,
+      "sl": 22573.849609375,
+      "t1": 22700.0,
+      "t2": 22800.0,
+      "why": "Breakout above resistance",
+      "time": "2026-10-28T11:05:00+05:30"
+    }
+  ],
   "closed": [
     {
       "index": "BANKNIFTY",
@@ -181,8 +192,8 @@
         "t2": 22800.0
       },
       "skipped": false,
-      "traded": false,
-      "last_scan": "2026-10-28T10:50:00+05:30"
+      "traded": true,
+      "last_scan": "2026-10-28T11:05:00+05:30"
     },
     "BANKNIFTY|2026-10-28": {
       "snap": {
