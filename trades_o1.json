@@ -1,5 +1,16 @@
 {
-  "open": [],
+  "open": [
+    {
+      "index": "NIFTY",
+      "side": "SELL",
+      "entry": 24587.150390625,
+      "sl": 24636.69921875,
+      "t1": 24500.0,
+      "t2": 24400.0,
+      "why": "Breakdown below support",
+      "time": "2026-11-06T10:55:00+05:30"
+    }
+  ],
   "closed": [
     {
       "index": "BANKNIFTY",
@@ -378,8 +389,8 @@
         "t2": 24400.0
       },
       "skipped": false,
-      "traded": false,
-      "last_scan": null
+      "traded": true,
+      "last_scan": "2026-11-06T10:55:00+05:30"
     },
     "BANKNIFTY|2026-11-06": {
       "snap": {
