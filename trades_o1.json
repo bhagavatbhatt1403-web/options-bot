@@ -1,16 +1,5 @@
 {
-  "open": [
-    {
-      "index": "NIFTY",
-      "side": "SELL",
-      "entry": 24587.150390625,
-      "sl": 24636.69921875,
-      "t1": 24500.0,
-      "t2": 24400.0,
-      "why": "Breakdown below support",
-      "time": "2026-11-06T10:55:00+05:30"
-    }
-  ],
+  "open": [],
   "closed": [
     {
       "index": "BANKNIFTY",
@@ -44,6 +33,17 @@
       "why": "Breakout above resistance",
       "time": "2026-10-28T11:05:00+05:30",
       "r": 3.18
+    },
+    {
+      "index": "NIFTY",
+      "side": "SELL",
+      "entry": 24587.150390625,
+      "sl": 24636.69921875,
+      "t1": 24500.0,
+      "t2": 24400.0,
+      "why": "Breakdown below support",
+      "time": "2026-11-06T10:55:00+05:30",
+      "r": -1.0
     }
   ],
   "days": {
