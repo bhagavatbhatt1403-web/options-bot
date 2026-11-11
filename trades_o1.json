@@ -44,6 +44,17 @@
       "why": "Breakdown below support",
       "time": "2026-11-06T10:55:00+05:30",
       "r": -1.0
+    },
+    {
+      "index": "NIFTY",
+      "side": "BUY",
+      "entry": 25312.349609375,
+      "sl": 25298.75,
+      "t1": 25500.0,
+      "t2": 25600.0,
+      "why": "Rejection at support",
+      "time": "2026-11-11T13:05:00+05:30",
+      "r": -1.0
     }
   ],
   "days": {
@@ -449,8 +460,8 @@
         "t2": 25600.0
       },
       "skipped": false,
-      "traded": false,
-      "last_scan": "2026-11-11T12:25:00+05:30"
+      "traded": true,
+      "last_scan": "2026-11-11T13:05:00+05:30"
     },
     "BANKNIFTY|2026-11-11": {
       "snap": {
