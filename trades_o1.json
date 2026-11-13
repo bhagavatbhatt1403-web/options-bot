@@ -501,6 +501,32 @@
       "skipped": false,
       "traded": false,
       "last_scan": null
+    },
+    "NIFTY|2026-11-13": {
+      "snap": {
+        "spot": 25197.0,
+        "atm": 25200.0,
+        "call_oi": 559750.0,
+        "put_oi": 696694.0,
+        "time": "2026-11-13T10:23:09.295615+05:30",
+        "bias": "NEUTRAL"
+      },
+      "skipped": false,
+      "traded": false,
+      "last_scan": null
+    },
+    "BANKNIFTY|2026-11-13": {
+      "snap": {
+        "spot": 61050.2,
+        "atm": 61100.0,
+        "call_oi": 41758.0,
+        "put_oi": 44437.0,
+        "time": "2026-11-13T10:23:11.407946+05:30",
+        "bias": "NEUTRAL"
+      },
+      "skipped": false,
+      "traded": false,
+      "last_scan": null
     }
   }
 }
