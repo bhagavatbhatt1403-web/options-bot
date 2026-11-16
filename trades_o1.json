@@ -530,13 +530,13 @@
     },
     "NIFTY|2026-11-16": {
       "snap": null,
-      "skipped": false,
+      "skipped": true,
       "traded": false,
       "last_scan": null
     },
     "BANKNIFTY|2026-11-16": {
       "snap": null,
-      "skipped": false,
+      "skipped": true,
       "traded": false,
       "last_scan": null
     }
