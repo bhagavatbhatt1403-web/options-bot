@@ -527,6 +527,18 @@
       "skipped": false,
       "traded": false,
       "last_scan": null
+    },
+    "NIFTY|2026-11-16": {
+      "snap": null,
+      "skipped": false,
+      "traded": false,
+      "last_scan": null
+    },
+    "BANKNIFTY|2026-11-16": {
+      "snap": null,
+      "skipped": false,
+      "traded": false,
+      "last_scan": null
     }
   }
 }
